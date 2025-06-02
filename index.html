@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web to Case Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .background-container {
+      background-image: url('https://your-image-url.com/image.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .form-wrapper {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-wrapper input[type="text"],
+    .form-wrapper textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .form-wrapper input[type="submit"] {
+      background-color: #0070d2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-wrapper input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="background-container">
+  <div class="form-wrapper">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000004KER8" method="POST">
+
+      <input type="hidden" name="orgid" value="00DgK000004KER8">
+      <input type="hidden" name="retURL" value="http://google.com">
+
+      <!-- Debug options (optional) -->
+      <!--
+      <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="lakshyadadhich175@gmail.com">
+      -->
+
+      <label for="00NgK000012dRt7">Booking Id:</label>
+      <input id="00NgK000012dRt7" maxlength="20" name="00NgK000012dRt7" type="text" />
+
+      <label for="00NgK000012dRuj">Feedback:</label>
+      <textarea id="00NgK000012dRuj" name="00NgK000012dRuj" rows="3" wrap="soft"></textarea>
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
